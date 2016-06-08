@@ -18,12 +18,11 @@ class UnderLineImageTextField: UITextField {
      
      */
     override func drawRect(rect: CGRect) {
-        print("caling method")
         let borderLayer = CALayer()
-        let widthOfBorder = self.getBorderWidht()
+        let widthOfBorder = getBorderWidht()
         borderLayer.frame = CGRectMake(-15, self.frame.size.height - widthOfBorder, self.frame.size.width+20, self.frame.size.height)
         borderLayer.borderWidth = widthOfBorder
-        borderLayer.borderColor = self.getBottomLineColor()
+        borderLayer.borderColor = getBottomLineColor()
         self.layer.addSublayer(borderLayer)
         self.layer.masksToBounds = true
         
